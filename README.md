@@ -1,1 +1,73 @@
 # Mushroom-classification
+
+# 1. Introduction
+
+Mushrooms are the fruiting bodies of fungi and are an important food source. Many species of wild or field mushrooms are considered delicacies in some cultures/countries. However, there are numerous mushrooms that can be toxic if eaten, and it is often difficult to distinguish between "edible" and poisonous species. Also, some "edible" species can be toxic to some humans under certain circumstances that may not be predictable. Poisoning as a consequence of mushroom ingestion continues to be a health problem in many countries, resulting in both morbidity and mortality. The annual global mortality rate from eating mushrooms is unknown, but speculatively may be at least 100 deaths/year, and is probably an underestimate given the approximately 50-100 deaths/year in Europe alone [1].
+
+# 2. Theoretical Framework
+
+Machine learning allows machines to make sense of how to perform actions that irrefutably required a man to do them. The different species of mushrooms constitute a source of food, so it is essential that we have some technique to collect them as poisonous and non-poisonous. Using machine learning models, we can get a really correct classification system that can classify fungi.
+
+## 2.1 Fungi
+
+Biologists currently use the term fungus (fungus=mushroom from Gr. Sphongus=sponge) to designate eukaryotic organisms, carriers of spores, or chlorophyll, which generally reproduce sexually and asexually and whose somatic, branched, and filamentous, they are surrounded by cell walls that contain chitin or cellulose, or both, along with other complex organic molecules. In other words, this means that fungi have true nuclei typical of cells, that they reproduce by means of spores, and that they do not have chlorophyll. Most fungi have a sexual mechanism. There are also some organisms that mycologists have inadvertently studied, which are probably not fungi, but are slime molds or myxomycetes, cellular and plasmodial. Myxomycetes resemble fungi in many ways and are studied by mycologists [2].
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Mushroom.jpg?raw=true)
+
+Figure 1. Mushroom.
+
+## 2.2 Diversity of Fungi
+
+Fungi are a group of living organisms devoid of chlorophyll. They resemble simple plants in that, in a few exceptions, they have defined cell walls, are usually non-motile, although they do have mobile reproductive cells, and reproduce by means of spores. The classification of fungi presents innumerable difficulties. However, taxonomy has a double objective, first of all, to name organisms, with as little confusion as possible, and secondly, to express current concepts about the relationships of fungi among themselves and with other living organisms. Paleontological studies indicate that fungi constitute a very ancient group that probably dates back to the Precambrian. The taxonomic groups used in the classification of fungi are: super kingdom, kingdom, division, class, order, family, genus and species[3].
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Morfology.jpg?raw=true)
+
+Figure 2. Morphology of a mushroom.
+
+Figure 2 shows the morphology of a fungus, this composed of:
+
+- Pileus: Also called the hat, it is the part of the fruiting body of the fungus that supports the surface where the spores are housed.
+- Lamina: They are the structures under the hat that act as a union of the lamellae with the foot.
+- Lamellae: They are the ones that contain the basidia, and these in turn are the ones that generate the spores.
+- Hymenium: It is the set of sheets and lamellae, it is the fertile part of the fungus.
+- Ring: Only present in some fungi, it is the rest of the partial veil when it is broken to expose the spores. The partial veil is the structure of some fungi to protect the development of the hymenium.
+- stipe: Also called peduncle, it is the one that holds the hat, it is made up of hyphal sterile tissue.
+- Volva: Only present in some mushrooms, it is the rest left by the universal veil. The universal veil is a cover that completely covers an immature mushroom, in some cases leaving a visible residue on the cap.
+- Mycelium: It is the set of hyphae responsible for the nutrition of the fungi.
+
+## 2.3 Classification algorithms
+
+### 2.3.1 Decision Tree
+
+Decision trees are a classification model used in artificial intelligence, whose main characteristic is its visual contribution to decision making. ID3, Iterative Dichotomiser 3 is a decision tree learning algorithm used for classifying objects with the iterative inductive approach. In this algorithm the top-down approach is used. The top node is called the root node and the others are leaf nodes. So it is a traversal from the root node to the leaf nodes. Each node requires some test on the attributes that decide the level of the leaf nodes. These decision trees are mainly used for decision making [4].
+
+### Entropy
+
+Entropy is used to determine how informative a particular input attribute is over the output attribute for a subset of the training data. Entropy is a measure of uncertainty in communication systems.
+
+The classical formula for entropy, whose value is between 0 and 1, is as follows:
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Entropy.jpg?raw=true)
+
+### Information gain
+
+The information gain is the measure used by the ID3 algorithm to select the most profitable attribute for separation. Also known as mutual information, information gain aims to reduce information uncertainty. In fact, the mutual information of two random variables X and Y measures the dependency relationship between the two variables: the higher the value of the mutual information, the stronger the dependence between X and Y, that is, in our case, the attribute with the highest information gain separates the data set well, which is why it should be chosen. The mathematical expression of this measure has the form:
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Gain.jpg?raw=true)
+
+### 2.3.2 K–NN
+
+K-Nearest Neighbor (KNN) algorithm for machine learning K-Nearest Neighbor is one of the simplest machine learning algorithms based on the supervised learning technique. The K-NN algorithm assumes the similarity between the new case/data and the available cases and places the new case in the category that is most similar to the available categories. The K-NN algorithm stores all available data and classifies a new data point based on similarity. This means that when new data appears, it can easily be classified into a category of well sets using the K-NN algorithm. The K-NN algorithm can be used for both regression and classification, but it is mainly used for classification problems. K-NN is a non-parametric algorithm, which means that it does not make any assumptions about the underlying data. It is also called a lazy learning algorithm because it does not learn from the training set immediately, but instead stores the data set and, at classification time, performs an action on the data set. The KNN algorithm in the training phase just stores the data set and when it gets new data, it classifies it into a category that is very similar to the new data.
+
+### 2.3.3 PCA
+
+Principal Component Analysis (PCA) is a statistical method that allows you to simplify the complexity of sample spaces with many dimensions while preserving their information. Suppose there is a sample with 𝑛 individuals each with p variables (𝑋1, 𝑋2, …, 𝑋𝑝), that is, the sample space has p dimensions; PCA allows us to find a number of underlying factors (𝑧 < 𝑝) that explain approximately the same as the original p variables. Where before p values were needed to characterize each individual, now z values suffice. Each of these z new variables is called a principal component. PCA belongs to the family of techniques known as unsupervised learning. In this case, the response variable Y is not taken into account since the objective is not to predict Y, but to extract information using the predictors, for example, to identify subgroups. The main problem faced by unsupervised learning methods is the difficulty in validating the results, since there is no response variable available to compare them. The PCA method therefore allows to “condense” the information provided by multiple variables into just a few components. This makes it a very useful method to apply prior to the use of other statistical techniques such as regression, clustering, etc. Even so, we must not forget that it is still necessary to have the value of the original variables to calculate the components.
+
+## 3. Methodology
+
+This section presents the classification methodology used to classify fungi based on behavioral characteristics. The methodology involves three important phases, which are preprocessing, feature selection, and classification, as shown in Figure 3.
+
+
+
+
+
