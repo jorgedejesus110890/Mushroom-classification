@@ -239,6 +239,67 @@ It is recommended to normalize the data in this case it will be from 0 to 1.
 
 Table 2. Values obtained by PCA.
 
+It can be seen in Table 2 that the last 12 components have less amount of data variation, the first 9 components retain more than 86% of the data.
+We proceed to divide the data into 4 subsets which we will call X_train, X_test, y_train, y_test, to train and test our classifier.
 
+Analyze:
+Next, we read the file and save our actual classifier values.
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/NewDataset.jpg?raw=true)
+
+Figure 7. New dataset with the attributes obtained by PCA. The data was split 80-20.
+
+### Train:
+
+The decision tree classifier is created and trained, obtaining the following tree.
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Tree.jpg?raw=true)
+
+Figure 8. Mushroom decision tree.
+In the same way, a K-NN classifier is created.
+
+### Test:
+
+After performing the prediction of our test set to assess the classification ability of the decision tree.
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/MC_Tree.jpg?raw=true)
+
+Figure 9. Decision tree confusion matrix.
+
+After performing the prediction of our test set to assess the classification ability of K-NN.
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/MC_KNN.jpg?raw=true)
+
+Figure 10. K-NN confusion matrix.
+
+The confusion matrix shows the results of the experiment.
+
+### Comparison of results
+
+|         |Decision Tree|K-NN|
+|---------|--------------------|-------------------|
+|Accuracy |	0.9993846153846154|	0.9926153846153846|
+|Precision	|1.0|	1.0|
+|Recall	|0.9987063389391979	|0.9846547314578005|
+|F1_score	|0.9993527508090615|	0.9922680412371134|
+
+Table 3. Metrics.
+
+# 5. Conclusions
+
+Classification of these data sets was carried out to classify mushrooms as edible or poisonous based on their behavioral characteristics. The data set contained 22 nominal attribute numbers (characteristics). Statistics from the dataset showed that the edible mushroom has an absolute count of 4,208 at 0.518%, while the poisonous mushroom has an absolute count of 3,916 at 0.482%. The results showed that the decision tree is the one that shows a higher pressure compared to K-NN as shown in Table 3.
+
+# 6. Bibliography
+
+[1] Dadpour B, Tajoddini S, Rajabi M, Afshari R. (2017) Mushroom Poisoning in the Northeast of Iran; a Retro- spective 6-Year Epidemiologic Study. Emergency, 5(1):e23.
+
+[2]Herrera Teófilo, et.al, 1998, El reino de los hongos micología básica y aplicada, Editorial fondo de cultura económica, segunda edición UNAM, Pag: 25-36.
+
+
+[4] [2] Rokach, L., Maimon, O. (2005). Top-Down Induction of Decision Trees Classifiers: A Survey. IEEE Transaction on Systems, Man, and Cybernetics – Part C: Applications and Reviews, Vol. 35, 4, pp. 476-487.
+
+[5] E. Boa. Overstory# 164-wild edible fungi and livelihoods. [Online]. Available: http://www.agroforestry.net/the-overstory/108-overstory-164- wild-edible-fungi-and-livelihoods.
+
+[6] J. Schlimmer, “Mushroom records drawn from the audubon society field guide to north american mushrooms,” GH Lincoff (Pres), New York, 1981.
 
 
