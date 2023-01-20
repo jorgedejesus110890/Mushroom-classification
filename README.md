@@ -63,7 +63,7 @@ K-Nearest Neighbor (KNN) algorithm for machine learning K-Nearest Neighbor is on
 
 Principal Component Analysis (PCA) is a statistical method that allows you to simplify the complexity of sample spaces with many dimensions while preserving their information. Suppose there is a sample with 𝑛 individuals each with p variables (𝑋1, 𝑋2, …, 𝑋𝑝), that is, the sample space has p dimensions; PCA allows us to find a number of underlying factors (𝑧 < 𝑝) that explain approximately the same as the original p variables. Where before p values were needed to characterize each individual, now z values suffice. Each of these z new variables is called a principal component. PCA belongs to the family of techniques known as unsupervised learning. In this case, the response variable Y is not taken into account since the objective is not to predict Y, but to extract information using the predictors, for example, to identify subgroups. The main problem faced by unsupervised learning methods is the difficulty in validating the results, since there is no response variable available to compare them. The PCA method therefore allows to “condense” the information provided by multiple variables into just a few components. This makes it a very useful method to apply prior to the use of other statistical techniques such as regression, clustering, etc. Even so, we must not forget that it is still necessary to have the value of the original variables to calculate the components.
 
-## 3. Methodology
+# 3. Methodology
 
 This section presents the classification methodology used to classify fungi based on behavioral characteristics. The methodology involves three important phases, which are preprocessing, feature selection, and classification, as shown in Figure 3.
 
@@ -71,7 +71,7 @@ This section presents the classification methodology used to classify fungi base
 
 Figure 3. Methodology.
 
-### 3.1	Base de datos
+## 3.1	Base de datos
 
 The Mushroom dataset and were obtained from the UCI Machine Learning Repository. This data set includes descriptions of hypothetical specimens corresponding to 23 species of gilled fungi in the family Agaricus and Lepiota.
 
@@ -205,3 +205,19 @@ The Mushroom dataset and were obtained from the UCI Machine Learning Repository.
 |                            |urban=u
 |                            |waste=w
 |                            |woods=d
+
+Table 1. Detailed information by attribute
+
+## 3.2 Preprocessing
+
+Preprocessing deals with data that is missing or invalid due to various reasons, including data entry issues. In addition, there are also attributes that are not relevant to the experiment. Irrelevant data should be removed from the data set because their presence may reduce the quality or accuracy of the classification experiment. In this investigation, the data set consists of nominal values. This data must undergo a data transformation, in which nominal values will be transformed into numeric values. By transforming the nominal value into numerical values, the data can now be fed into the classification algorithm.
+
+# 4. Experiments and Results
+
+## Gather
+
+We start by importing the libraries, and displaying a sample of the data being made using the Mushroom database and obtained from the UCI Machine Learning Repository. This data set includes descriptions of hypothetical specimens corresponding to 23 species of gilled fungi in the family Agaricus and Lepiota.
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Data.jpg?raw=true)
+
+
