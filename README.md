@@ -71,7 +71,7 @@ This section presents the classification methodology used to classify fungi base
 
 Figure 3. Methodology.
 
-## 3.1	Base de datos
+## 3.1	DataSet
 
 The Mushroom dataset and were obtained from the UCI Machine Learning Repository. This data set includes descriptions of hypothetical specimens corresponding to 23 species of gilled fungi in the family Agaricus and Lepiota.
 
@@ -219,5 +219,26 @@ Preprocessing deals with data that is missing or invalid due to various reasons,
 We start by importing the libraries, and displaying a sample of the data being made using the Mushroom database and obtained from the UCI Machine Learning Repository. This data set includes descriptions of hypothetical specimens corresponding to 23 species of gilled fungi in the family Agaricus and Lepiota.
 
 ![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Data.jpg?raw=true)
+
+Figure 4. Database instances and attributes.
+
+In the same way, we proceed to visualize quickly and graphically the distribution of the data.
+
+### Data distribution
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/distribution.png?raw=true)
+
+Figure 5. Distribution of data from the Mushroom data set.
+
+### Set up:
+
+Before reading our data to start with the classification, it is necessary to select the characteristics that provide more information.
+It is recommended to normalize the data in this case it will be from 0 to 1.
+
+![alt text](https://github.com/jorgedejesus110890/Mushroom-classification/blob/main/Covariance.jpg?raw=true)
+
+Table 2. Values obtained by PCA.
+
+
 
 
